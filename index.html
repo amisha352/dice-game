@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice game
+    </title>
+    <style>
+        button{
+            background-color: rgb(28, 191, 28);
+            color:aliceblue;
+            height: 100px;
+            width: 200px;
+        }
+        body{
+            background-color: lightblue;
+        }
+        img{
+            height: 500px;
+            width: 500px;
+        }
+        .container{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="javascript:void(0)" onclick="roll()"><button><h1>ROLL</button></h1></button></a>
+   </div>
+   <br>
+   <br>
+   <br>
+   <div id="result" class="container"></div>
+    <script>
+        function roll()
+         {
+            document.getElementById("result").innerHTML= "<img src='loader.gif'/>";
+            setTimeout(() => {
+                
+           
+            let rand=Math.floor(Math.random()*6)+1;
+        document.getElementById("result").innerHTML= `<img src='${rand}.png'/>`;
+    }, 2000);
+}
+
+
+    </script>
+</body>
+</html>
